@@ -1,0 +1,33 @@
+<div class="container">
+  <h3>Log In</h3>
+  <form [formGroup]="myForm" (ngSubmit)="singInAccount()" class="form-add-post">
+
+    <!-- Título del post (podrías agregar más campos si es necesario) -->
+    <div class="input-box">
+      <mat-form-field class="mat-form-field">
+        <input matInput type="username" placeholder="email" [(ngModel)]="this.email" formControlName="email" required
+        >
+        <mat-error *ngIf="myForm.get('email')?.invalid">
+          Email is required and must be a valid email address.
+        </mat-error>
+      </mat-form-field>
+    </div>
+
+    <div class="input-box">
+      <mat-form-field class="mat-form-field">
+        <input matInput type="password" placeholder="Password" [(ngModel)]="this.password" formControlName="password" required>
+        <mat-error *ngIf="myForm.get('password')?.invalid">
+          Password is required and must be at least 6 characters long.
+        </mat-error>
+      </mat-form-field>
+    </div>
+
+    <div class="content-button" style="text-align: center">
+      <button  style="color: white" type="submit" mat-button>Log in</button>
+      <div class="text-signup">
+        <p  style="padding-top: 1rem">Dont Have an account?</p>
+        <a routerLink="/register" style="color: inherit; text-decoration: none" >Sign Up</a>
+      </div>
+    </div>
+  </form>
+</div>

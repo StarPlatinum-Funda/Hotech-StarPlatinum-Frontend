@@ -1,0 +1,15 @@
+<div class="schedule-container">
+  <div class="schedule-row">
+    <h1>
+      Schedule
+    </h1>
+    <a mat-icon-button href="/#/schedule">
+      <mat-icon>schedule</mat-icon>
+    </a>
+  </div>
+
+  <app-schedule-view
+    [canChangeView]="false"
+    [view]="CalendarView.Week"
+  ></app-schedule-view>
+</div>

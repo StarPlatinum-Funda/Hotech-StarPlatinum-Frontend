@@ -1,0 +1,32 @@
+<div class="task-container">
+  <h1 class="card-title">Tasks</h1>
+</div>
+<div class="task-container">
+  <div class="task-buttons">
+    <mat-form-field>
+    <mat-label> <mat-icon>search</mat-icon> Filter</mat-label>
+    <input matInput #filterInput (keyup)="applyFilter($event)" placeholder="Ex. Task 1">
+    </mat-form-field>
+    <button mat-icon-button (click)="resetFilter(filterInput)">
+      <mat-icon>refresh</mat-icon>
+    </button>
+    <button mat-icon-button [matMenuTriggerFor]="filterMenu">
+      <mat-icon>filter_list</mat-icon>
+    </button>
+    <mat-menu #filterMenu="matMenu">
+      <button mat-menu-item (click)="filterType = 'name'">Task Name</button>
+      <button mat-menu-item (click)="filterType = 'description'">Description</button>
+      <button mat-menu-item (click)="filterType = 'dueDate'">Due Date</button>
+      <button mat-menu-item (click)="filterType = 'pending'">Status</button>
+      <button mat-menu-item (click)="filterType = 'employeeEmail'">Employee</button>
+    </mat-menu>
+  </div>
+  <div class="task-buttons" *ngIf="isManager">
+    <app-task-creation (taskCreated)="createTask($event)"></app-task-creation>
+  </div>
+</div>
+<div class="card-container">
+  <div class="card-display">
+    <app-task-card class="card" *ngFor="let task of filteredTasks" [task]="task" (update)="handleUpdate($event)" (delete)="onDeleteItem($event)"></app-task-card>
+  </div>
+</div>

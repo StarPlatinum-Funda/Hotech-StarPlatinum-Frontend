@@ -1,0 +1,63 @@
+<div class="container">
+  <h3>Sign Up</h3>
+  <form [formGroup]="myForm" (ngSubmit)="signUpAccount()" class="form-add-post">
+
+    <div class="input-box">
+      <mat-form-field class="mat-form-field">
+        <input matInput type="firstName" placeholder="First Name" [(ngModel)]="this.firstName" formControlName="firstName" required>
+      </mat-form-field>
+    </div>
+    <div class="input-box">
+      <mat-form-field class="mat-form-field">
+        <input matInput type="lastName" placeholder="Last Name" [(ngModel)]="this.lastName" formControlName="lastName" required>
+      </mat-form-field>
+    </div>
+    <div class="input-box">
+      <mat-form-field class="mat-form-field">
+        <input matInput type="phoneNumber" placeholder="Phone Number" [(ngModel)]="this.phoneNumber" formControlName="phoneNumber" required>
+        <mat-error *ngIf="myForm.get('phoneNumber')?.invalid">
+          Phone Number is required and must be a valid phone number.
+        </mat-error>
+      </mat-form-field>
+    </div>
+    <div class="input-box">
+      <mat-form-field class="mat-form-field">
+        <input matInput type="email" placeholder="Email" [(ngModel)]="this.email" formControlName="email" required>
+        <mat-error *ngIf="myForm.get('email')?.invalid">
+          Email is required and must be a valid email address.
+        </mat-error>
+      </mat-form-field>
+    </div>
+
+    <div class="input-box">
+      <mat-form-field class="mat-form-field">
+        <input matInput type="password" placeholder="Password" [(ngModel)]="this.password" formControlName="password" required>
+        <mat-error *ngIf="myForm.get('password')?.invalid">
+          Password is required and must be at least 6 characters long.
+        </mat-error>
+      </mat-form-field>
+      <div class="input-box role-selection">
+        <label>
+          <input  type="radio" name="role" (click)="setRollUser(1)" checked
+          >
+          Employee
+        </label>
+        <label>
+          <input type="radio" name="role" (click)="setRollUser(2)" >
+          Manager
+        </label>
+      </div>
+    </div>
+    <div class="content-button" style="text-align: center">
+      <button style="color: white" type="submit" mat-button (click)="signUpAccount()">Sign Up</button>
+      <div class="text-signup">
+        <p  style="padding-top: 1rem">Already Have an Account?</p>
+        <a routerLink="/login" style="color: inherit; text-decoration: none" >Log In</a>
+      </div>
+    </div>
+  </form>
+</div>
+
+
+
+

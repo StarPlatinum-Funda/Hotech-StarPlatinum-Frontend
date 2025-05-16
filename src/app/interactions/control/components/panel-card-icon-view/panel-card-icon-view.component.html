@@ -1,0 +1,15 @@
+<div class="panel-card-view">
+  <h1>
+    {{ title }}
+  </h1>
+
+  <div class="panel-card-container">
+    <app-panel-card-icon
+      *ngFor="let icon of icons"
+      [icon]="icon.icon"
+      [title]="icon.title"
+      [toRoute]="icon.toRoute"
+    >
+    </app-panel-card-icon>
+  </div>
+</div>
