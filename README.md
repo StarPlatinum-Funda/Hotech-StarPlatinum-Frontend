@@ -1,8 +1,6 @@
-# Inn Control
-Inn control it's a hotel management system that allows you to manage your hotel, it's rooms, and reservations. It's a web application that allows you to manage your hotel from anywhere.
+# Hotech
+Hotech   it's a hotel management system that allows you to manage your hotel, it's rooms, and reservations. It's a web application that allows you to manage your hotel from anywhere.
 
-## About Deploy
-By netlify :heart: [![Netlify Status](https://api.netlify.com/api/v1/badges/903ce64f-efc8-4e89-9a1f-0ae802a078dd/deploy-status)](https://app.netlify.com/sites/inncontrolapp/deploys)
 
 ## Dependencies
 - Angular CLI
