@@ -13,7 +13,7 @@ import {getRoleUserFromValue} from "../../iam/model/roll-user";
 })
 export class EmployeeApiService {
 
-  basePath: string = environment.production ? environment.prodBasePath : environment.serverBasePath;
+  basePath: string = environment.production ? environment.prodBasePath + "/MSProfile" : environment.serverBasePath + "/MSProfile";
   httpOptions = {
     headers: new HttpHeaders({
       'Content-Type': 'application/json',

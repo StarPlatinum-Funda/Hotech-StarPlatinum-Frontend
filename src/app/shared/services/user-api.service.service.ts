@@ -10,6 +10,6 @@ import {catchError, map, Observable, of, retry} from "rxjs";
 export class UserApiServiceService extends BaseService<User>{
   constructor(http:HttpClient) {
     super(http);
-    this.resourceEndpoint = '/users';
+    this.resourceEndpoint = '/MSProfile//users';
   }
 }

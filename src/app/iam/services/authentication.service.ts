@@ -15,7 +15,7 @@ import {EmployeeApiService} from "../../shared/services/employee-api.service";
   providedIn: 'root'
 })
 export class AuthenticationService {
-  basePath: string = environment.production ? environment.prodBasePath : environment.serverBasePath;
+  basePath: string = environment.production ? environment.prodBasePath + "/MSProfile": environment.serverBasePath + "/MSProfile";
   httpOptions = {
     headers: new HttpHeaders({
       'Content-Type': 'application/json',

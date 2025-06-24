@@ -10,6 +10,6 @@ export class InventoryApiService extends BaseService<Inventory> {
 
   constructor(http: HttpClient) {
     super(http);
-    this.resourceEndpoint = '/inventory';
+    this.resourceEndpoint = '/MSInventory/inventory';
   }
 }

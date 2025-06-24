@@ -11,7 +11,7 @@ import { CreateMessageRequest } from "../model/employee/create-message.request";
 })
 export class MessageApiService {
 
-  basePath: string = environment.production ? environment.prodBasePath : environment.serverBasePath;
+  basePath: string = environment.production ? environment.prodBasePath + "/MSMessage" : environment.serverBasePath + "/MSMessage";
   httpOptions = {
     headers: new HttpHeaders({
       'Content-Type': 'application/json',

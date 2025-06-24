@@ -14,7 +14,7 @@ export class RoomsApiService extends BaseService<Room>{
 
   constructor(private httpClient: HttpClient) {
     super(httpClient);
-    this.resourceEndpoint = '/rooms';
+    this.resourceEndpoint = '/MSRoom/rooms';
   }
 
   createRoom(room: RoomCreateRequest): Observable<any> {

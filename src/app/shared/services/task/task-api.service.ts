@@ -16,7 +16,7 @@ export class TaskApiService extends BaseService<Task> {
 
   constructor(http: HttpClient, private employeeService: EmployeeApiService) {
     super(http);
-    this.resourceEndpoint = '/tasks';
+    this.resourceEndpoint = '/MSTask/tasks';
     this.employeeService.getCurrentUser().subscribe((user) => {
       this.manager = user.rolUser == 1;
       this.employeeEmail = user.email;
