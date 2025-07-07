@@ -1,7 +1,6 @@
 <mat-card class="card-content" (click)="clickedRoom()">
   <mat-card-header class="roomNumber">
     <mat-card-title class="titleroom">{{ this.room.roomNumber }}
-      <mat-icon *ngIf="Occupied" class="alertRoom">error</mat-icon>
       <mat-menu #menu="matMenu" xPosition="before">
         <button mat-menu-item (click)="editRoom(room)">Edit</button>
         <button mat-menu-item (click)="delete()">Delete</button>
@@ -13,12 +12,8 @@
   </mat-card-header>
   <mat-card-content class="roomCardContent">
     <div class="subtitle">
-      <mat-card-subtitle class="subtitle-text-room">Type: {{ this.room.roomType }}</mat-card-subtitle>
-      <mat-card-subtitle class="subtitle-text-room">Status: {{ this.room.roomStatus }}</mat-card-subtitle>
-      <mat-card-subtitle class="subtitle-text-room">Reservation: {{ this.room.roomReservation }}
-      </mat-card-subtitle>
+      <mat-card-subtitle class="subtitle-text-room">Type: {{ this.room.type }}</mat-card-subtitle>
+      <mat-card-subtitle class="subtitle-text-room">User ID: {{ this.room.userId }}</mat-card-subtitle>
     </div>
-    <mat-divider [vertical]="true"></mat-divider>
-    <mat-card-subtitle class="subtitle-text-room">Guest: {{ this.room.fullName }}</mat-card-subtitle>
   </mat-card-content>
 </mat-card>

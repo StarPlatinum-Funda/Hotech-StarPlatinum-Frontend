@@ -1,17 +1,11 @@
 export class RoomRequest {
-  id: number;
-  fullName: string;
-  roomType: string;
-  roomStatus: string;
   roomNumber: number;
-  roomReservation: string;
+  type: string;
+  userId: number;
 
-  constructor(id: number, fullName: string, roomType: string, roomStatus: string, roomNumber: number, roomReservation: string) {
-    this.id = id;
-    this.fullName = fullName;
-    this.roomType = roomType;
-    this.roomStatus = roomStatus;
+  constructor( roomNumber: number, type: string, userId: number) {
     this.roomNumber = roomNumber;
-    this.roomReservation = roomReservation;
+    this.type = type;
+    this.userId = userId;
   }
 }

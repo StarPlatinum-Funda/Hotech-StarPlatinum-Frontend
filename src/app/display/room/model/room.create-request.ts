@@ -6,7 +6,7 @@ export class RoomCreateRequest {
   userId: number;
 
 
-  constructor(firstName: string, lastName: string, type: string, state: string, roomNumber: number, initialDate: Date, finalDate: Date) {
+  constructor(type: string, roomNumber: number, userId: number) {
     this.type = type;
     this.roomNumber = roomNumber;
     this.userId = 10;

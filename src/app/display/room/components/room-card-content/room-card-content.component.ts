@@ -31,12 +31,10 @@ export class RoomCardContentComponent implements  OnInit{
     console.log('Fetching rooms');
     this.roomsApiService.getAll().subscribe(response => {
       this.roomsData = response.map((room: any) => new RoomRequest(
-        room.id,
-        room.fullName,
-        room.roomType,
-        room.roomStatus,
+        room.type,
         room.roomNumber,
-        room.roomReservation
+        room.userId,
+
       ));
     });
   }

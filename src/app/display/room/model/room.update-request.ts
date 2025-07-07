@@ -1,21 +1,11 @@
 export class RoomUpdateRequest {
-  id: number;
-  firstName: string;
-  lastName: string;
-  type: string;
-  state: string;
   roomNumber: number;
-  initialDate: Date;
-  finalDate: Date;
+  type: string;
+  userId: number;
 
-  constructor(id: number, firstName: string, lastName: string, type: string, state: string, roomNumber: number, initialDate: Date, finalDate: Date) {
-    this.id = id;
-    this.firstName = firstName;
-    this.lastName = lastName;
-    this.type = type;
-    this.state = state;
+  constructor( roomNumber: number, type: string, userId: number) {
     this.roomNumber = roomNumber;
-    this.initialDate = initialDate;
-    this.finalDate = finalDate;
+    this.type = type;
+    this.userId = userId;
   }
 }

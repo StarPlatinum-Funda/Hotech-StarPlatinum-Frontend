@@ -19,7 +19,7 @@ export class RoomCreateButtonComponent {
 
   openDialog(): void {
     const dialogRef = this.dialog.open(RoomCreateDialogComponent, {
-      data: new RoomRequest(1, '', '', 'pending', 1, '')
+      data: new RoomRequest(1, '', 1) // Initialize with default values
     });
     dialogRef.afterClosed().subscribe(result => {
       if (result) {

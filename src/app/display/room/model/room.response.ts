@@ -1,19 +1,11 @@
 export class RoomResponse {
-  firstName: string;
-  lastName: string;
-  type: string;
-  state: string;
   roomNumber: number;
-  initialDate: Date;
-  finalDate: Date;
+  type: string;
+  userId: number;
 
-  constructor(firstName: string, lastName: string, type: string, state: string, roomNumber: number, initialDate: Date, finalDate: Date) {
-    this.firstName = firstName;
-    this.lastName = lastName;
+  constructor( type: string, roomNumber: number, userId: number ) {
     this.type = type;
-    this.state = state;
     this.roomNumber = roomNumber;
-    this.initialDate = initialDate;
-    this.finalDate = finalDate;
+    this.userId = userId;
   }
 }
