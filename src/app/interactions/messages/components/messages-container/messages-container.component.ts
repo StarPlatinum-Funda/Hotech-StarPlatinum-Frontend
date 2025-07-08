@@ -106,7 +106,7 @@ export class MessagesContainerComponent implements OnInit {
     console.log('Evento recibido del hijo:', event);
     this.message.messages = this.resetMessages.messages;
     if (event === 'Sent') {
-      this.message.messages = this.message.getMessageBySenderId(1);
+      this.message.messages = this.message.getMessageBySenderId("1");
     } else if (event === 'Unread') {
       this.message.messages = this.message.getMessageByUnreadStatus();
     } else if (event === 'Reset') {
