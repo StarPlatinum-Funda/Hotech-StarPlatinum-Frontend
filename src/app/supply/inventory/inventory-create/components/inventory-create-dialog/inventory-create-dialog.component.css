@@ -45,3 +45,8 @@
   flex: 1 0 200px;
   margin: 10px;
 }
+
+mat-dialog-actions {
+  display: flex;
+  justify-content: flex-end;
+}
