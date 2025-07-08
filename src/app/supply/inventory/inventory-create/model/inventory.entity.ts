@@ -2,10 +2,11 @@ export class Inventory {
 
 
   id: number;
-  productTitle: string;
+  //poner product aqui
   productDescription: string;
   Brand: string;
   Quantity: number;
+  productTitle: string;
 
 
 
