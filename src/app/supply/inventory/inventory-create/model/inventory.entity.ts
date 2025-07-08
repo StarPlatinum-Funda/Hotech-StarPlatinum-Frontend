@@ -2,11 +2,11 @@ export class Inventory {
 
 
   id: number;
-  //poner product aqui
+  productTitle: string;
   productDescription: string;
   Brand: string;
   Quantity: number;
-  productTitle: string;
+  
 
 
 
