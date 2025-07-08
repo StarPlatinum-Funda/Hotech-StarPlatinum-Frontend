@@ -10,10 +10,10 @@ export class Messages {
     this.messages = [];
   }
 
-  changeState(messageId: number, state: string) {
+  changeState(messageId: number, status: string) {
     this.messages?.forEach((message) => {
       if (message.id === messageId) {
-        message.state = state;
+        message.status = status;
       }
     });
   }
@@ -78,10 +78,10 @@ export class Messages {
 
   getMessageByUnreadStatus() {
     let unreadMessages: any = [];
-    unreadMessages = this.messages.filter((message) => message.state === "unread");
+    unreadMessages = this.messages.filter((message) => message.status === "unread");
 
     this.messages.forEach((message) => {
-      if (message.state === "read") {
+      if (message.status === "read") {
         unreadMessages.push(message);
       }
     })
@@ -94,7 +94,7 @@ export class Messages {
 
   getUnreadSize() {
     let unreadMessages: any;
-    unreadMessages = this.messages.filter((message) => message.state === "unread");
+    unreadMessages = this.messages.filter((message) => message.status === "unread");
     return unreadMessages.length;
   }
 
@@ -113,10 +113,10 @@ export class Messages {
     return this;
   }
 
-  getMessageBySenderId(userId: number) {
+  getMessageBySenderId(userId: string) {
     const sentMessages: any = [];
     this.messages?.forEach((message) => {
-      if (message.from === userId) {
+      if (message.sender === userId) {
         sentMessages.push(message);
 
       } else if (sentMessages.length === 0) {
