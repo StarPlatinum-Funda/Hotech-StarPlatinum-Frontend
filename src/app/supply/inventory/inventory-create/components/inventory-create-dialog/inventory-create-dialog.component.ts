@@ -6,6 +6,7 @@ import {Provider} from "../../model/provider.entity";
 import {Warehouse} from "../../model/warehouse.entity";
 import {ProviderApiService} from "../../services/provider-api.service";
 import {WarehouseApiService} from "../../services/warehouse-api.service";
+import { CreateInventory } from '../../model/inventory-create.entity';
 
 @Component({
   selector: 'app-inventory-create-dialog',
@@ -48,18 +49,17 @@ export class InventoryCreateDialogComponent implements OnInit {
     if (this.InventoryItemFormGroup.valid) {
       const formValues = this.InventoryItemFormGroup.value;
 
-      const selectedData = new Inventory(
-        0,
-        formValues.itemTitle,
-        formValues.itemDescription,
-        formValues.brandName,
-        formValues.itemQuantity,
-        formValues.rechargeLimit,
-        formValues.providerId,
-        formValues.warehouseId
-      );
+      const newItem = new CreateInventory(
+  formValues.itemTitle,
+  formValues.itemDescription,
+  formValues.brandName,
+  formValues.itemQuantity,
+  formValues.rechargeLimit,
+  formValues.providerId,
+  formValues.warehouseId
+);
 
-      this.dialogRef.close(selectedData);
+      this.dialogRef.close(newItem);
     }
   }
 }
