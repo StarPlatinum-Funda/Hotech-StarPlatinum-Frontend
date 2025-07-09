@@ -12,9 +12,8 @@
 <div class="subtitle">
   <mat-card-subtitle class="subtitle-text">to: {{this.message.receptor}}</mat-card-subtitle>
   <mat-card-subtitle class="subtitle-text" >from: {{this.message.sender}}</mat-card-subtitle>
-  <mat-card-subtitle class="subtitle-text">to: {{this.message.content}}</mat-card-subtitle>
-  <mat-card-subtitle class="subtitle-text">to: {{this.message.status}}</mat-card-subtitle>
-  <mat-card-subtitle class="subtitle-text">Sent: {{this.message.date | date:'short'}}</mat-card-subtitle>
+  <mat-card-subtitle class="subtitle-text">content: {{this.message.content}}</mat-card-subtitle>
+  <mat-card-subtitle class="subtitle-text">status: {{this.message.status}}</mat-card-subtitle>
 </div>
     <mat-divider [vertical]="true"></mat-divider>
     <p class="text">

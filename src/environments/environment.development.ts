@@ -1,5 +1,5 @@
 export const environment = {
   production: false,
-  serverBasePath: 'http://localhost:9101',
-  prodBasePath: 'http://localhost:9101'
+  serverBasePath: '20.197.240.203:9101',
+  prodBasePath: '20.197.240.203:9101'
 };
