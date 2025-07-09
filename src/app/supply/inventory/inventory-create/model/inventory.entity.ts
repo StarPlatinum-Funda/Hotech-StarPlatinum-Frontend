@@ -1,28 +1,28 @@
 export class Inventory {
   id: number;
-  itemTitle: string;
-  itemDescription: string;
+  productTitle: string;
   brandName: string;
-  itemQuantity: number;
+  productDescription: string;
+  Quantity: number;
   rechargeLimit: number;
   providerId: number;
   warehouseId: number;
 
   constructor(
     id: number,
-    itemTitle: string,
-    itemDescription: string,
+    productTitle: string,
     brandName: string,
-    itemQuantity: number,
+    productDescription: string,
+    Quantity: number,
     rechargeLimit: number,
     providerId: number,
     warehouseId: number
   ) {
     this.id = id;
-    this.itemTitle = itemTitle;
-    this.itemDescription = itemDescription;
+    this.productTitle = productTitle;
     this.brandName = brandName;
-    this.itemQuantity = itemQuantity;
+    this.productDescription = productDescription;
+    this.Quantity = Quantity;
     this.rechargeLimit = rechargeLimit;
     this.providerId = providerId;
     this.warehouseId = warehouseId;

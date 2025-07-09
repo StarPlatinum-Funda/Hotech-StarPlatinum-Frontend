@@ -51,8 +51,8 @@ export class InventoryCreateDialogComponent implements OnInit {
 
       const newItem = new CreateInventory(
   formValues.itemTitle,
-  formValues.itemDescription,
   formValues.brandName,
+  formValues.itemDescription,
   formValues.itemQuantity,
   formValues.rechargeLimit,
   formValues.providerId,

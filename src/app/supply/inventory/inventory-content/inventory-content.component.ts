@@ -45,11 +45,11 @@ export class InventoryContentComponent implements OnInit{
 searchFilter(event: any){
   console.log('Filtro recibido', event);
 
-  let filter: Inventory | undefined = this.inventoryData.find((inventory: Inventory) => inventory.itemTitle === event);
+  let filter: Inventory | undefined = this.inventoryData.find((inventory: Inventory) => inventory.productTitle === event);
 
-  if(filter !== undefined && filter.itemTitle !== ''){
+  if(filter !== undefined && filter.productTitle !== ''){
     console.log('Item found');
-    this.inventoryData = this.inventoryData.filter((inventory: Inventory) => inventory.itemTitle === event);
+    this.inventoryData = this.inventoryData.filter((inventory: Inventory) => inventory.productTitle === event);
   }
   else {
     console.log('Item not found');
@@ -61,9 +61,9 @@ receiveFilter(event: any){
   console.log('Event received', event);
   if(event === 'More to less stock'){
     console.log('Order in: More to less');
-    this.inventoryData.sort((a: Inventory ,b) => b.itemQuantity - a.itemQuantity);
+    this.inventoryData.sort((a: Inventory ,b) => b.Quantity - a.Quantity);
   }else if(event === 'Less to more stock'){
-    this.inventoryData.sort((a: Inventory, b) => a.itemQuantity - b.itemQuantity);
+    this.inventoryData.sort((a: Inventory, b) => a.Quantity - b.Quantity);
     console.log('Order in: Less to more');
   }
 }

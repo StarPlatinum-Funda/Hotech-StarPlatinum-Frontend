@@ -20,7 +20,7 @@ export class InventoryCardDialogComponent {
   constructor(public dialogRef: MatDialogRef<InventoryCardDialogComponent>,
               @Inject(MAT_DIALOG_DATA) public data: Inventory, private dialog: MatDialog) {
 
-    console.log('Data received: ', data.itemQuantity);
+    console.log('Data received: ', data.Quantity);
   }
 
   onNoClick(): void{

@@ -4,6 +4,7 @@ import { InventoryCreateDialogComponent } from '../inventory-create-dialog/inven
 import { Inventory } from '../../model/inventory.entity';
 import { InventoryApiService } from '../../services/inventory-api.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { CreateInventory } from '../../model/inventory-create.entity';
 
 @Component({
   selector: 'app-inventory-creation',
@@ -25,7 +26,7 @@ export class InventoryCreationComponent {
       data: new Inventory(0, '', '', '', 0, 0, 0, 0)
     });
 
-    dialogRef.afterClosed().subscribe((result: Inventory | undefined) => {
+    dialogRef.afterClosed().subscribe((result: CreateInventory | undefined) => {
       if (result) {
         this.inventoryApi.create(result).subscribe({
           next: (createdInventory) => {

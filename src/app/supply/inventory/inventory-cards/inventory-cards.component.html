@@ -1,6 +1,6 @@
 <mat-card class="card-content" (click)="clickedInventory()">
   <mat-card-header class="inventoryTitle">
-    <mat-card-title>{{ this.inventory.itemTitle}}</mat-card-title>
+    <mat-card-title>{{ this.inventory.productTitle}}</mat-card-title>
     <br>
     <br>
     <button (click)="clickedMenu()" (onMenuClose)="this.Menu=false" mat-icon-button color="primary" [matMenuTriggerFor]="menu" class="menu-button"><mat-icon>more_horiz</mat-icon></button>
@@ -11,9 +11,9 @@
   </mat-card-header>
   <mat-card-content class="inventoryCardContent">
     <div class="subtitle">
-      <p class="subtitle-text">{{this.inventory.itemDescription}}</p>
+      <p class="subtitle-text">{{this.inventory.productDescription}}</p>
       <br>
-      <mat-card-subtitle class="subtitle-text" style="font-weight: bold">Stock Level: {{this.inventory.itemQuantity}}</mat-card-subtitle>
+      <mat-card-subtitle class="subtitle-text" style="font-weight: bold">Stock Level: {{this.inventory.Quantity}}</mat-card-subtitle>
     </div>
   </mat-card-content>
 </mat-card>

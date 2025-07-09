@@ -26,10 +26,10 @@ export class InventoryEditDialogComponent implements OnInit {
     private warehouseApi: WarehouseApiService
   ) {
     this.InventoryItemFormGroup = this.formBuilder.group({
-      itemTitle: new FormControl(data.itemTitle, [Validators.required]),
-      itemDescription: new FormControl(data.itemDescription, [Validators.required]),
+      itemTitle: new FormControl(data.productTitle, [Validators.required]),
+      itemDescription: new FormControl(data.productDescription, [Validators.required]),
       brandName: new FormControl(data.brandName, [Validators.required]),
-      itemQuantity: new FormControl(data.itemQuantity, [Validators.required, Validators.pattern(/^\d+$/)]),
+      itemQuantity: new FormControl(data.Quantity, [Validators.required, Validators.pattern(/^\d+$/)]),
       rechargeLimit: new FormControl(data.rechargeLimit, [Validators.required, Validators.pattern(/^\d+$/)]),
       providerId: new FormControl(data.providerId, [Validators.required]),
       warehouseId: new FormControl(data.warehouseId, [Validators.required])
